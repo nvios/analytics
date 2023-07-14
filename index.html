@@ -2,10 +2,10 @@
 <html>
 
 <head>
-    <title>Nvios | Redirect</title>
+    <title>Nvios</title>
     <meta charset="utf-8">
     <meta name="author" content="Luca Bontempi" />
-    <meta name="description" content="Nvios | General Purpose Redirect Page" />
+    <meta name="description" content="</>" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.ico">
@@ -28,14 +28,10 @@
 <body>
     <img id="tracker" src="#" />
     <script>
-
         const params = new URLSearchParams(window.location.search)
         const source = params.get('s')
         const url = params.get('u')
         const notes = params.get('n')
-
-        // document.getElementById("tracker").src = `https://docs.google.com/forms/u/0/d/e/1FAIpQLSe3dwlvl1oRyVwnU197sYwYMrfOk2HBFOIJEMSNIiKRCGfm_A/formResponse?entry.225266900=${encodeURIComponent(source)}&entry.1335002843=${encodeURIComponent(url)}&entry.1635928165=${encodeURIComponent(notes)}`
-        // setTimeout(() => { window.location.href = url }, 4000);
 
         fetch(`https://docs.google.com/forms/u/0/d/e/1FAIpQLSe3dwlvl1oRyVwnU197sYwYMrfOk2HBFOIJEMSNIiKRCGfm_A/formResponse?entry.225266900=${encodeURIComponent(source)}&entry.1335002843=${encodeURIComponent(url)}&entry.1635928165=${encodeURIComponent(notes)}`, { mode: 'no-cors' })
             .then(() => window.location.href = url)
